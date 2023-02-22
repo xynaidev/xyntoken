@@ -21,7 +21,6 @@ contract TestToken is BasedOFT {
     address public ROUTER;
     mapping (address => bool) private restrictedWallets;
     mapping (address => bool) private automatedMarketMakerPairs;
-    mapping (address => uint256) private _balances;
 
     constructor(address _layerZeroEndpoint, uint _initialSupply, address _FACTORY, address _WETH, address _ROUTER) BasedOFT("AIT", "AIT", _layerZeroEndpoint) {
         _mint(_msgSender(), _initialSupply);
